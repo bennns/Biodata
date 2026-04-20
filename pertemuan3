@@ -1,0 +1,57 @@
+public class pertemuan3 {
+    public static void main(String[] args) {
+        // 1. Perhatikan penggunaan huruf kapital pada nama Class (Mahasiswa)
+        // 2. Gunakan constructor yang sesuai dengan parameter yang didefinisikan
+        Mahasiswa m1 = new Mahasiswa("Albani", "001"); 
+        Mahasiswa m2 = new Mahasiswa("Sayidina", "002");
+        Mahasiswa m4 = new Mahasiswa(); // Menggunakan constructor tanpa parameter
+
+        m1.tampilkanData();
+        m2.tampilkanData();
+        
+        m1.setNim("241110106");
+        m1.tampilkanData();
+        
+        m4.tampilkanData();
+    }
+}
+
+class Mahasiswa {
+    String nama;
+    String nim;
+
+    // Constructor tanpa parameter (Default)
+    public Mahasiswa() {
+        this.nama = "Albani Sayidina";
+        this.nim = "241110106";
+    }
+
+    // Constructor dengan parameter
+    public Mahasiswa(String nama, String nim) {
+        this.nama = nama;
+        this.nim = nim;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public String getNama() {
+        return this.nama;
+    }
+
+    public void setNim(String nim) {
+        this.nim = nim;
+    }
+
+    public String getNim() {
+        return this.nim;
+    }
+
+    // Menampilkan data berdasarkan variabel yang ada di dalam object
+    public void tampilkanData() {
+        System.out.println("Nama    : " + this.nama);
+        System.out.println("Nim     : " + this.nim);
+        System.out.println();
+    }
+}
